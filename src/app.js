@@ -12,7 +12,7 @@ import { electionErrorHandler, electionNotFound } from './middleware/errorHandle
 import { logElectionActivity } from './middleware/electionMiddleware.js';
 
 const app = express();
-
+app.set('trust proxy', 1);
 // Security middleware
 app.use(helmet({
   crossOriginResourcePolicy: { policy: "cross-origin" }
